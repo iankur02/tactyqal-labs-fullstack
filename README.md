@@ -33,17 +33,11 @@ custom CMS: a React + Vite frontend, an Express + MongoDB API, and a secure admi
 
 ## 🌐 Live Demo
 
-| Service | URL | Status |
-|---|---|---|
-| **Frontend** | `https://tactyqal-labs.vercel.app` | _placeholder — set after deploy_ |
-| **API** | `https://tactyqal-api.onrender.com/api` | _placeholder_ |
-| **Admin** | `https://tactyqal-labs.vercel.app/admin/login` | _placeholder_ |
-| **Health** | `https://tactyqal-api.onrender.com/api/health` | _placeholder_ |
-
-> **Note:** This repository ships **deployment-ready configuration**, not live infrastructure.
-> Follow [Deployment](#-deployment) to stand it up yourself in ~20 minutes.
-
----
+| Service | URL |
+| :--- | :--- |
+| **Frontend (Vercel)** | [https://tactyqal-labs.vercel.app] |
+| **Backend API (Render)** | [https://tactyqal-labs-fullstack.onrender.com/api/health]|
+| **Admin Dashboard** | [https://tactyqal-labs.vercel.app/admin/login] |
 
 ## 🖼️ Screenshots
 
