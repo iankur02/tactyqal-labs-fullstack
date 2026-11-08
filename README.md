@@ -133,10 +133,10 @@ custom CMS: a React + Vite frontend, an Express + MongoDB API, and a secure admi
 │  React + Vite + RQ      │──HTTPS───▶│  JWT · Zod · Mongoose   │
 │  Tailwind · Framer      │◀──HTTPS───│  Multer · Cloudinary    │
 └─────────────────────────┘           └────────────┬────────────┘
-       │                                          │
-       │ (Bearer in memory,                      │
-       │  httpOnly refresh cookie)               │
-       │                                          ▼
+       │                                           │
+       │ (Bearer in memory,                        │
+       │  httpOnly refresh cookie)                 │
+       │                                           ▼
        │                          ┌─────────────────────────────┐
        │                          │      MongoDB Atlas          │
        │                          │  users · posts · categories │
