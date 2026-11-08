@@ -41,18 +41,13 @@ custom CMS: a React + Vite frontend, an Express + MongoDB API, and a secure admi
 
 ## 🖼️ Screenshots
 
-> Replace with images from a running instance once deployed.
-> Suggested capture set: homepage hero, `/blog` grid, `/blog/:slug` detail,
-> admin dashboard, post editor, categories manager, mobile nav drawer.
-
-| Desktop | Mobile |
+| Homepage | Admin Dashboard |
 |:---:|:---:|
-| ![Homepage](./docs/screenshots/home-desktop.png) | ![Homepage mobile](./docs/screenshots/home-mobile.png) |
-| ![Blog](./docs/screenshots/blog-list.png) | ![Blog mobile](./docs/screenshots/blog-mobile.png) |
-| ![Blog detail](./docs/screenshots/blog-detail.png) | ![Admin dashboard](./docs/screenshots/admin-dashboard.png) |
-| ![Admin editor](./docs/screenshots/admin-editor.png) | ![Admin mobile](./docs/screenshots/admin-mobile.png) |
+| ![Homepage](./docs/screenshots/home.png) | ![Admin Dashboard](./docs/screenshots/admin.png) |
 
----
+| Public Blog | Blog Detail |
+|:---:|:---:|
+| ![Blog](./docs/screenshots/blog.png) | ![Blog Detail](./docs/screenshots/blog-detail.png) |
 
 ## ✨ Features
 
