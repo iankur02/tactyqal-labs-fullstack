@@ -10,17 +10,24 @@ const {
   refreshCookieOptions,
 } = require('../utils/jwt');
 
-// A bcrypt hash of a random string — never matches a real password.
-// Its only purpose is to burn CPU time so a "user not found" response
-// takes the same length of time as a "wrong password" response.
-const DUMMY_HASH = '$2a$12$C7pS.7FJFRGKlNaLPK1RVe3W3YzXFKv1r6l/v1X3Nqh5C0Y6LyN6q';
+// A known-valid bcrypt hash of the word "password".
+// Used to prevent timing attacks: we compare against this if the user isn't found,
+// so the response time is identical whether the email exists or not.
+const DUMMY_HASH = '$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy';
 
 const login = catchAsync(async (req, res, next) => {
   const { email, password } = req.body;
 
   const user = await User.findOne({ email }).select('+password');
   const stored = user?.password || DUMMY_HASH;
-  const ok = await bcrypt.compare(password, stored);
+  
+  let ok = false;
+  try {
+    ok = await bcrypt.compare(password, stored);
+  } catch (err) {
+    // If bcrypt fails for any reason, just treat it as a bad password
+    ok = false;
+  }
 
   if (!user || !ok) return next(new AppError('Invalid credentials', 401));
 
