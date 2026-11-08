@@ -1,0 +1,140 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ────────────────────────────────────────────────────────────────
+   Base — typography, selection, smooth scrolling, reduced motion
+   ──────────────────────────────────────────────────────────────── */
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+  body {
+    @apply bg-surface-50 font-sans text-brand-950 antialiased;
+  }
+  h1,
+  h2,
+  h3 {
+    @apply font-display tracking-tight;
+  }
+  ::selection {
+    @apply bg-brand-500/20;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+  :focus-visible {
+    outline: 2px solid #2563eb;
+    outline-offset: 2px;
+    border-radius: 6px;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+}
+
+/* ────────────────────────────────────────────────────────────────
+   Components — utility classes and prose typography
+   ──────────────────────────────────────────────────────────────── */
+@layer components {
+  /* Layout / buttons */
+  .container-x {
+    @apply mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-12;
+  }
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-brand-500 px-6 py-3 text-sm font-semibold text-white shadow-soft transition hover:bg-brand-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-400 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-60;
+  }
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-brand-950/15 bg-white px-6 py-3 text-sm font-semibold text-brand-950 transition hover:border-brand-950/40 hover:bg-surface-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-400 focus-visible:ring-offset-2;
+  }
+
+  /* Blog rich-content typography */
+  .prose-tactyqal {
+    @apply text-[1.05rem] leading-relaxed text-brand-950/80;
+  }
+  .prose-tactyqal > * + * {
+    @apply mt-5;
+  }
+  .prose-tactyqal h1,
+  .prose-tactyqal h2,
+  .prose-tactyqal h3,
+  .prose-tactyqal h4 {
+    @apply font-display text-brand-950;
+  }
+  .prose-tactyqal h1 {
+    @apply mt-10 text-3xl sm:text-4xl;
+  }
+  .prose-tactyqal h2 {
+    @apply mt-10 text-2xl sm:text-3xl;
+  }
+  .prose-tactyqal h3 {
+    @apply mt-8 text-xl sm:text-2xl;
+  }
+  .prose-tactyqal h4 {
+    @apply mt-6 text-lg;
+  }
+  .prose-tactyqal p {
+    @apply text-brand-950/75;
+  }
+  .prose-tactyqal a {
+    @apply font-medium text-brand-600 underline decoration-brand-500/30 underline-offset-2 hover:decoration-brand-500;
+  }
+  .prose-tactyqal strong {
+    @apply font-semibold text-brand-950;
+  }
+  .prose-tactyqal em {
+    @apply italic;
+  }
+  .prose-tactyqal ul,
+  .prose-tactyqal ol {
+    @apply space-y-2 pl-6;
+  }
+  .prose-tactyqal ul {
+    @apply list-disc;
+  }
+  .prose-tactyqal ol {
+    @apply list-decimal;
+  }
+  .prose-tactyqal li::marker {
+    @apply text-brand-500;
+  }
+  .prose-tactyqal blockquote {
+    @apply rounded-r-xl border-l-4 border-brand-500/50 bg-surface-100/60 px-5 py-4 italic text-brand-950/75;
+  }
+  .prose-tactyqal code {
+    @apply rounded bg-surface-100 px-1.5 py-0.5 font-mono text-[0.92em] text-brand-800;
+  }
+  .prose-tactyqal pre {
+    @apply overflow-x-auto rounded-xl2 bg-brand-950 p-5 text-sm text-surface-50;
+  }
+  .prose-tactyqal pre code {
+    @apply bg-transparent p-0 text-inherit;
+  }
+  .prose-tactyqal img {
+    @apply rounded-xl2 shadow-soft;
+  }
+  .prose-tactyqal hr {
+    @apply my-10 border-brand-950/10;
+  }
+  .prose-tactyqal table {
+    @apply w-full overflow-hidden rounded-xl2 border border-brand-950/10 text-sm;
+  }
+  .prose-tactyqal th {
+    @apply bg-surface-100 px-4 py-2 text-left font-semibold text-brand-950;
+  }
+  .prose-tactyqal td {
+    @apply border-t border-brand-950/5 px-4 py-2 text-brand-950/75;
+  }
+}

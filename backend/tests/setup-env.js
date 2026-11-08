@@ -1,0 +1,12 @@
+process.env.NODE_ENV = 'test';
+process.env.CLIENT_URL = 'http://localhost:5173';
+process.env.MONGODB_URI = 'mongodb://127.0.0.1:27017/test'; // unused; memory server overrides
+process.env.JWT_SECRET = 'a'.repeat(64);
+process.env.JWT_REFRESH_SECRET = 'b'.repeat(64);
+process.env.JWT_EXPIRES_IN = '15m';
+process.env.JWT_REFRESH_EXPIRES_IN = '7d';
+process.env.RATE_LIMIT_WINDOW_MS = '900000';
+process.env.RATE_LIMIT_MAX = '1000'; // tests do many requests
+process.env.CLOUDINARY_CLOUD_NAME = '';
+process.env.CLOUDINARY_API_KEY = '';
+process.env.CLOUDINARY_API_SECRET = '';

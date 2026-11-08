@@ -1,0 +1,43 @@
+{
+  "name": "tactyqal-backend",
+  "version": "1.0.0",
+  "private": true,
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "start": "node server.js",
+    "lint": "eslint \"src/**/*.js\" server.js",
+    "seed:admin": "node src/seed/admin.seed.js",
+    "test": "jest --runInBand",
+    "test:watch": "jest --watch"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cloudinary": "^2.5.1",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0",
+    "express-mongo-sanitize": "^2.2.0",
+    "express-rate-limit": "^7.4.0",
+    "helmet": "^7.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.7.0",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.1",
+    "react-router-dom": "7.18.5",
+    "slugify": "^1.6.6",
+    "vite": "8.3.6",
+    "zod": "^4.6.7"
+  },
+ "devDependencies": {
+  "cross-env": "^7.0.3",
+  "eslint": "^8.57.1",
+  "jest": "^30.0.0",
+  "jest-environment-node": "^30.0.0",
+  "mongodb-memory-server": "^10.0.0",
+  "nodemon": "^3.1.7",
+  "prettier": "^3.3.3",
+  "supertest": "^7.0.0"
+}
+}
