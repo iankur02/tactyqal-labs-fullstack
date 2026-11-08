@@ -592,5 +592,5 @@ The marketing copy on the homepage is derived from Tactyqal Labs' public sources
 ---
 
 <p align="center">
-  <sub>Built with care for the Tactyqal Labs Hire-a-thon · <a href="https://tactyqal.com/">tactyqal.com</a></sub>
+  <sub>Built with ❤️ for the Tactyqal Labs Hire-a-thon · <a href="https://tactyqal.com/">tactyqal.com</a></sub>
 </p>
