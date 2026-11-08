@@ -89,8 +89,7 @@ export default function BlogListPage() {
                             Tactyqal Labs Blog
                         </h1>
                         <p className="mt-4 text-base leading-relaxed text-brand-950/65 sm:text-lg">
-                            Practicries,al guides, founder sto and no-code playbooks â€“ written for entrepreneurs
-                            turning ideas into products.
+                            Practical guides, founder stories, and no-code playbooks — written for entrepreneurs turning ideas into products.
                         </p>
                     </header>
 
